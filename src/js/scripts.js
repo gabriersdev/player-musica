@@ -48,6 +48,7 @@ document.querySelector('#link-youtube').setAttribute('href', musicas[0].link);
 
 //Funções para ir para a música anterior
 function musicaAnterior(){
+  // TODO - Retroceder para a música anterior (se aleatório ativo ou não, voltar para a música anterior)
   if(checkbox.checked == true){
     let max = ((musicas.length) - 1);
     let anteriorAleatorio = indexAleatorio(0, max);
@@ -63,6 +64,7 @@ function musicaAnterior(){
 
 //Funções para ir para a próxima música
 function musicaProxima(){
+  // TODO - Armaazenar index de músicas já reproduzidas
   if(checkbox.checked == true){
     let max = ((musicas.length) - 1);
     let proximaAleatorio = indexAleatorio(0, max);
@@ -136,6 +138,7 @@ setInterval ( function () { //Função que troca a música após uma ter sido ex
   }
 }, 1000);
 
+// TODO - Implementar verificação se index já foi reproduzido
 function indexAleatorio(min, max){ //Função que aleatoriamente gera um número de faixa para ser renderizada
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -183,7 +186,7 @@ function nivelVolume(msg){
   alert.style.display = "block";
   document.querySelector('#msg').textContent = msg;
   alert.classList.add('fade-in');
-  setTimeout( () => {
+  setTimeout(() => {
     alert.classList.remove('fade-in');
     alert.classList.add('fade-out');
     setTimeout( () => {
