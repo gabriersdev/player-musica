@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta property="og:image" content=""> <!-- Imagem no link -->
+  <meta property="og:image:width" content=""> <!-- Largura da imagem no link -->
+  <meta property="og:image:hidth" content=""> <!-- Altura da imagem no link -->
+  <meta property="og:image:type" content="image/type"> <!-- Tipo da imagem -->
+  
+  <title>Player de Música</title>
+  
+  <!-- Importação dos arquivos CSS -->
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="shortcut icon" href="./src/image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"> <!-- Biblioteca de icons -->
+  <!-- Fim da Importação dos arquivos CSS -->
+  
+</head>
+<body data-link="../image/01.jpg">
+  <div class="container">
+    <div class="centro">
+      <img class="capa" src="./src/image/01.jpg" alt="">
+      <div class="descricao">
+        <div class="header-descricao">
+          <h2 class="titulo">Ouro</h2>
+          <div class="aleatorio">
+            <input type="checkbox" name="aleatorio" id="aleatorio" class="checkbox-aleatorio">
+            <i class="fas fa-duotone fa-shuffle icon-aleatorio disabled" id="icon-aleatorio" onclick="ativaCheckbox()" title="Ativa ou desativa modo aleatório"></i>
+          </div>
+        </div>
+        <p class="artista">BProblemx, Sidoka, XAVS</p>
+      </div>
+      
+      <div class="controles">
+        <i class="fa-solid fa-volume-low volume-menos" onclick="volumeMenos(this)" title="Diminuir volume"></i>
+        <i class="fa-solid fa-volume-xmark volume-mudo" onclick="volumeMudo(this)" title="Mutar ou desmutar volume"></i>
+        <i class="fa-solid fa-volume-high volume-mais" onclick="volumeMais(this)" title="Aumentar volume"></i>
+      </div>
+      
+      <div class="duracao">
+        <div class="barra">
+          <progress value="0" max="1"></progress>
+          <div class="ponto">
+          </div>
+        </div>
+        <div class="tempo">
+          <p class="inicio">0:00</p>
+          <p class="fim">4:04</p>
+        </div>
+      </div>
+      
+      <div class="player">
+        <i class="fas fa-duotone fa-backward-step botao-seta anterior" onclick="musicaAnterior()" title="Voltar"></i>
+        <i class="fas fa-solid fa-circle-play botao-play" title="Tocar"></i>
+        <i class="fas fa-solid fa-circle-pause botao-pause" title="Pausar"></i>
+        <i class="fas fa-duotone fa-forward-step botao-seta proxima" onclick="musicaProxima()" title="Próxima"></i>
+      </div>
+      
+      <div class="creditos">
+        <a href="" target="_blank" id="link-youtube">Ver no Youtube</a>
+        <i class="fa-solid fa-square-arrow-up-right"></i>
+      </div>
+      
+      <audio src="./src/audio/01.mp3"></audio>
+      
+      <div class="alert-box" id="alert-box"><p id="msg" class="feedback">O volume está em 21%</p></div>
+    </div>
+  </div>
+  
+  <!-- Importação de arquivos Javascript -->
+  <script src="./src/js/scripts.js"></script>
+  <!-- Fim da importação -->  
+  
+</body>
+</html>
