@@ -1,0 +1,328 @@
+*{
+  margin: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: "Circular Black";
+  src: url(../fonts/CircularStd-Black.otf);
+}
+
+@font-face {
+  font-family: "Circular Bold";
+  src: url(../fonts/CircularStd-Bold.otf);
+}
+
+@font-face {
+  font-family: "Circular Std Medium";
+  src: url(../fonts/CircularStd-Medium.otf);
+}
+
+@font-face {
+  font-family: "Circular Std Medium Italic";
+  src: url(../fonts/CircularStd-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: "Circular Std Light";
+  src: url(../fonts/CircularStd-Light.otf);
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; } 
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; } 
+}
+
+@-moz-keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+:root{
+  --background-color: #000000;
+
+  --fonteFamilyTitulo: "Circular Black", sans-serif;
+  --fonteSizeTitulo: 1.5rem;
+  --colorTitulo: #DDDDDD;
+
+  --fonteFamilySubtitulo: "Circular Std Medium", sans-serif;
+  --fonteSizeSubtitulo: 1.3rem; 
+  --colorSubtitulo: #DDDDDD;
+
+  --fonteFamilyConteudo: "Circular Std Light", sans-serif;
+  --fonteSizeConteudo: 1rem;
+  --fonteSmallSizeConteudo: 0.8rem;
+  --colorConteudo: #F6F6F6;
+
+  --fonteSizeIconsPrincipal: 3.125rem; 
+
+  --fonteSizeIconsSecundario: 2.5rem;
+
+  --fonteSizeIconTerciario: 1.25rem;
+  --colorIconTerciario: #B5ADAD;
+  --verde: #0EDB97;
+  --verdeAgua: #50FFC5;
+}
+
+i{
+  color: var(--colorIconTerciario);
+  cursor: pointer;
+}
+
+body{
+  /* 01.jpg é a imagem da primeira música carregada */
+  background: url(../image/01.jpg) center / cover no-repeat ;
+  transition: background 0.5s ease-in-out;
+}
+
+div.centro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: var(--background-color); */
+  backdrop-filter: blur(100px) brightness(50%);
+}
+
+div.centro img.capa{
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 15px;
+}
+
+div.centro div.descricao{
+  width: 18.75rem;
+}
+
+div.header-descricao{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18.75rem;
+}
+
+div.centro div.descricao div.header-descricao h2.titulo{
+  font-family: var(--fonteFamilyTitulo);
+  font-size: var(--fonteSizeTitulo);
+  color: var(--colorConteudo);
+
+  margin-top:1.56rem;
+  margin-bottom: 0.31rem;
+}
+
+div.centro div.descricao div.header-descricao div.aleatorio input.checkbox-aleatorio{
+  display: none;
+}
+
+div.centro div.descricao div.header-descricao div.aleatorio i.icon-aleatorio{
+  font-size: var(--fonteSizeIconTerciario);
+  margin-top: 1.5rem;
+}
+
+.disabled{
+  color: var(--colorConteudo);
+}
+
+.enable{
+  color: var(--verde);
+}
+
+div.centro div.descricao p.artista{
+  font-family: var(--fonteFamilyConteudo);
+  font-size: var(--fonteSizeConteudo);
+  color: var(--colorConteudo);
+}
+
+div.controles{
+  display: flex;
+  width: 18.75rem;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--fonteSizeIconTerciario);
+}
+
+div.controles i{
+  transition: scale 0.3s ease-in-out;
+  color: #F6F6F6;
+}
+
+div.controles i:hover{
+  scale: 1.15;
+}
+
+div.centro div.duracao{
+  width: 18.75rem;
+  margin-top: 1.56rem;
+}
+
+div.centro div.duracao div.barra{
+  width: 18.75rem;
+  height: 0.37rem;
+  border: 1px solid #EEEEEE;
+  border-radius: 0.31rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Inicia com os elementos alinhados à esquerda */
+}
+
+div.centro div.duracao progress{
+  height: 0.37rem;
+  width: 0;
+  background-color: var(--background-color);
+}
+
+div.centro div.duracao div.ponto{
+  background-color: #EEEEEE;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%; 
+  margin-left: -0.625rem;
+}
+
+div.centro div.tempo{
+  display: flex;
+  width: 18.75rem;
+  justify-content: space-between; /* Distancia os elementos o máximo possível */
+  margin-top: 0.75rem;
+}
+
+div.centro div.tempo p.inicio, p.fim{
+  font-family: var(--fonteFamilyConteudo);
+  font-size: var(--fonteSmallSizeConteudo);
+  color: var(--colorConteudo);
+}
+
+div.centro div.player{
+  width: 18.75rem;
+  display: flex;
+  justify-content: space-around; /* Separa um pouco os elementos*/
+  align-items: center;
+  margin-top: 1.56rem;
+}
+
+div.centro div.player i{
+  color: var(--colorConteudo);
+}
+
+div.centro div.player i.botao-play{
+  font-size: var(--fonteSizeIconsPrincipal);
+}
+
+i.botao-play, i.botao-pause, i.botao-seta{
+  transition: scale 0.3s ease-in-out;
+}
+
+div.centro div.player i.botao-pause{
+  font-size: var(--fonteSizeIconsPrincipal);
+  display: none; /* Escondendo o botão */
+}
+
+div.centro div.player i.botao-seta{
+  font-size: var(--fonteSizeIconsSecundario);
+}
+
+i.botao-play:hover, i.botao-pause:hover, i.botao-seta:hover{
+  scale: 1.15;
+}
+
+div.centro div.creditos{
+  font-family: var(--fonteFamilyConteudo);
+  font-size: var(--fonteSizeConteudo);
+  
+  color: #F6F6F6;
+  margin-top: 1.56rem;
+  transition: scale 0.3s ease-in-out;
+
+  .fa-solid{
+    color: #F6F6F6;
+  }
+}
+
+div.centro div.creditos a{
+  color: inherit;
+  text-decoration: none;
+}
+
+div.centro div.creditos:hover{
+  scale: 1.025;
+}
+
+div.centro div.creditos:hover a{
+  text-decoration: none;
+}
+
+/* Estilização das mensagens de volume */
+
+div.centro div.alert-box{
+  /* margin-top: 4rem; */
+  /* margin-bottom: 5.5rem; */
+  padding: 10px;
+  width: 18.75rem;
+  border: 1px solid var(--verde);
+  border-radius: 4px; 
+  backdrop-filter: blur(100px);
+  background-color: #00000050;
+  bottom: 2rem;
+  position: fixed;
+  display: none;
+  opacity: 1;
+}
+
+.fade-in{
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+  -moz-animation: fadeIn 0.3s ease-in-out;
+  -o-animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-out{
+  -webkit-animation: fadeOut 0.3s ease-in-out;
+  -moz-animation: fadeOut 0.3s ease-in-out;
+  -o-animation: fadeOut 0.3s ease-in-out;
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+div.alert-box p{
+  width: inherit;
+  text-align: center;
+}
+
+div.alert-box p.feedback {
+  font-family: var(--fonteFamilyConteudo);  
+  font-size: var(--fonteSizeConteudo);
+  color: var(--colorConteudo);
+  border-color: #D6E9C6;
+}
