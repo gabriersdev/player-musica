@@ -1,7 +1,7 @@
 # Player Musica
 
 <!-- Description -->
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Este é um player simples de música desenvolvido usando as tecnologias simples de desenvolimento front-end WEB. O player reproduz músicas escolhidas por mim e possui controles básicos para o usuário.
 
 <!-- Link -->
 Esse projeto pode ser acessado [através desse link.][link-projeto]
@@ -10,9 +10,9 @@ Esse projeto pode ser acessado [através desse link.][link-projeto]
 
 ## Funcionalides
 <!-- Functionalities -->
-- Função 1
-- Função 2
-- Função 3
+- Reproduzir faixas
+- Modo aleatório - faixas são reproduzidas fora de ordem
+- Controle de reprodução: mute, aumentar e diminuir som, voltar e ir para a próxima faixa
 
 ## Tecnologias utilizadas
 <!-- List technologies -->
@@ -20,5 +20,5 @@ Esse projeto pode ser acessado [através desse link.][link-projeto]
 - Font Awesome (Icons)
 
 <!-- Variables -->
-[img-exemplo-projeto]: https://gabrieszin.github.io/player-musica
+[img-exemplo-projeto]: https://gabrieszin.github.io/player-musica/src/image/exemplo.png
 [link-projeto]: https://github.io/gabrieszin/player-musica
