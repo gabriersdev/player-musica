@@ -121,6 +121,7 @@ div.centro img.capa{
   width: 18.75rem;
   height: 18.75rem;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 div.centro div.descricao{
@@ -138,6 +139,7 @@ div.centro div.descricao div.header-descricao h2.titulo{
   font-family: var(--fonteFamilyTitulo);
   font-size: var(--fonteSizeTitulo);
   color: var(--colorConteudo);
+  font-weight: normal;
 
   margin-top:1.56rem;
   margin-bottom: 0.31rem;
@@ -150,6 +152,9 @@ div.centro div.descricao div.header-descricao div.aleatorio input.checkbox-aleat
 div.centro div.descricao div.header-descricao div.aleatorio i.icon-aleatorio{
   font-size: var(--fonteSizeIconTerciario);
   margin-top: 1.5rem;
+  padding: 0.55rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .disabled{
@@ -157,7 +162,8 @@ div.centro div.descricao div.header-descricao div.aleatorio i.icon-aleatorio{
 }
 
 .enable{
-  color: var(--verde);
+  backdrop-filter: blur(100px);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 div.centro div.descricao p.artista{
@@ -202,7 +208,7 @@ div.centro div.duracao div.barra{
 div.centro div.duracao progress{
   height: 0.37rem;
   width: 0;
-  background-color: var(--background-color);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 div.centro div.duracao div.ponto{
@@ -238,7 +244,17 @@ div.centro div.player i{
   color: var(--colorConteudo);
 }
 
-div.centro div.player i.botao-play{
+.btn-invisivel{
+  background: none;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+div.centro div.player .botao-play i{
   font-size: var(--fonteSizeIconsPrincipal);
 }
 
@@ -246,9 +262,12 @@ i.botao-play, i.botao-pause, i.botao-seta{
   transition: scale 0.3s ease-in-out;
 }
 
-div.centro div.player i.botao-pause{
+div.centro div.player .botao-pause{
+  display: none;
+}
+
+div.centro div.player .botao-pause i{
   font-size: var(--fonteSizeIconsPrincipal);
-  display: none; /* Escondendo o botão */
 }
 
 div.centro div.player i.botao-seta{
@@ -292,7 +311,7 @@ div.centro div.alert-box{
   /* margin-bottom: 5.5rem; */
   padding: 10px;
   width: 18.75rem;
-  border: 1px solid var(--verde);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 4px; 
   backdrop-filter: blur(100px);
   background-color: #00000050;

@@ -25,20 +25,20 @@
       <img class="capa" src="./src/image/01.jpg" alt="">
       <div class="descricao">
         <div class="header-descricao">
-          <h2 class="titulo">Ouro</h2>
+          <h2 class="titulo">Luxúria</h2>
           <div class="aleatorio">
             <input type="checkbox" name="aleatorio" id="aleatorio" class="checkbox-aleatorio">
             <i class="fas fa-duotone fa-shuffle icon-aleatorio disabled" id="icon-aleatorio" onclick="ativaCheckbox()" title="Ativa ou desativa modo aleatório"></i>
           </div>
         </div>
-        <p class="artista">BProblemx, Sidoka, XAVS</p>
+        <p class="artista">Matuê, Xamã</p>
       </div>
       
       <!-- TODO - Alterar i por botões para maior acessibilidade -->
       <div class="controles">
-        <i class="fa-solid fa-volume-low volume-menos" onclick="volumeMenos(this)" title="Diminuir volume"></i>
-        <i class="fa-solid fa-volume-xmark volume-mudo" onclick="volumeMudo(this)" title="Mutar ou desmutar volume"></i>
-        <i class="fa-solid fa-volume-high volume-mais" onclick="volumeMais(this)" title="Aumentar volume"></i>
+        <button class="btn-invisivel" onclick="volumeMenos(this)"><i class="fa-solid fa-volume-low volume-menos" title="Diminuir volume"></i></button>
+        <button  class="btn-invisivel" onclick="volumeMudo(this)"><i class="fa-solid fa-volume-xmark volume-mudo" title="Mutar ou desmutar volume"></i></button>
+        <button class="btn-invisivel" onclick="volumeMais(this)"><i class="fa-solid fa-volume-high volume-mais" title="Aumentar volume"></i></button>
       </div>
       
       <div class="duracao">
@@ -55,10 +55,10 @@
       
       <!-- TODO - Alterar i por botões para maior acessibilidade -->
       <div class="player">
-        <i class="fas fa-duotone fa-backward-step botao-seta anterior" onclick="musicaAnterior()" title="Voltar"></i>
-        <i class="fas fa-solid fa-circle-play botao-play" title="Tocar"></i>
-        <i class="fas fa-solid fa-circle-pause botao-pause" title="Pausar"></i>
-        <i class="fas fa-duotone fa-forward-step botao-seta proxima" onclick="musicaProxima()" title="Próxima"></i>
+        <button class="btn-invisivel" onclick="musicaAnterior()"><i class="fas fa-duotone fa-backward-step botao-seta anterior" title="Voltar"></i></button>
+        <button class="btn-invisivel botao-play"><i class="fas fa-solid fa-circle-play" title="Tocar"></i></button>
+        <button class="btn-invisivel botao-pause"><i class="fas fa-solid fa-circle-pause" title="Pausar"></i></button>
+        <button class="btn-invisivel"><i class="fas fa-duotone fa-forward-step botao-seta proxima" onclick="musicaProxima()" title="Próxima"></i></button>
       </div>
       
       <div class="creditos">
