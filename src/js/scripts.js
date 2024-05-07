@@ -46,6 +46,7 @@ let anterior = document.querySelector('.anterior');
 let proxima = document.querySelector('.proxima');
 let link = document.querySelector('#link-youtube');
 let checkbox = document.querySelector('#aleatorio');
+const reproducoes = [];
 
 //Eventos de mouse
 document.querySelector('.botao-play').addEventListener('click', tocarMusica); //(evento, função)
@@ -57,7 +58,7 @@ document.querySelector('#link-youtube').setAttribute('href', musicas[0].link);
 
 //Funções para ir para a música anterior
 function musicaAnterior(){
-  // TODO - Retroceder para a música anterior (se aleatório ativo ou não, voltar para a música anterior)
+  // Retroceder para a música anterior (se aleatório ativo ou não, voltar para a música anterior)
   if(checkbox.checked == true){
     let max = ((musicas.length) - 1);
     let anteriorAleatorio = indexAleatorio(0, max);
@@ -73,7 +74,7 @@ function musicaAnterior(){
 
 //Funções para ir para a próxima música
 function musicaProxima(){
-  // TODO - Armaazenar index de músicas já reproduzidas
+  // TODO - Armazenar index de músicas já reproduzidas
   if(checkbox.checked == true){
     let max = ((musicas.length) - 1);
     let proximaAleatorio = indexAleatorio(0, max);
@@ -105,6 +106,8 @@ function renderizarMusica(index){
     link.setAttribute('href', musicas[index].link);
     duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
   })
+
+  reproducoes.push(index);
 }
 
 function atualizarBarra(){
@@ -151,7 +154,18 @@ setInterval ( function () { //Função que troca a música após uma ter sido ex
 function indexAleatorio(min, max){ //Função que aleatoriamente gera um número de faixa para ser renderizada
   min = Math.ceil(min);
   max = Math.floor(max);
-  let retorno =  Math.floor(Math.random() * (max - min + 1)) + min
+  let retorno = Math.floor(Math.random() * (max - min + 1)) + min;
+  let vez = 0;
+
+  while (reproducoes.includes(retorno) && vez < reproducoes.length) {
+    retorno = Math.floor(Math.random() * (max - min + 1)) + min;
+    vez += 1;
+  }
+
+  if (vez === reproducoes.length) {
+    reproducoes = [];
+  }
+
   return (retorno);
 }
 
