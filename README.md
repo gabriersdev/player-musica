@@ -20,5 +20,5 @@ Esse projeto pode ser acessado [através desse link.][link-projeto]
 - Font Awesome (Icons)
 
 <!-- Variables -->
-[img-exemplo-projeto]: https://gabrieszin.github.io/player-musica/src/image/exemplo.png
-[link-projeto]: https://github.io/gabrieszin/player-musica
+[img-exemplo-projeto]: https://gabriersdev.github.io/player-musica/src/image/exemplo.png
+[link-projeto]: https://github.io/gabriersdev/player-musica
