@@ -1,6 +1,7 @@
 *{
   margin: 0;
   border: 0;
+  font-family: sans-serif;
 }
 
 @font-face {
@@ -288,6 +289,10 @@ div.centro div.creditos{
 
   .fa-solid{
     color: #F6F6F6;
+  }
+
+  #link-youtube{
+    font-family: inherit;
   }
 }
 

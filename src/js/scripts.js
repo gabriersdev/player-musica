@@ -1,35 +1,35 @@
 //Array
 
 let musicas = [
-  {titulo: 'Luxúria', artista: 'Matuê, Xamã', src: './src/audio/01.mp3', img: './src/image/01.jpg', link: 'https://www.youtube.com/watch?v=eycuj9jczm0'},
-  {titulo: 'Caracol', artista: 'Brandão', src: './src/audio/02.mp3', img: './src/image/02.jpg', link: 'https://www.youtube.com/watch?v=nTD66AHeU1E'},
-  {titulo: 'Elefante', artista: 'Brandão', src: './src/audio/03.mp3', img: './src/image/03.jpg', link: 'https://www.youtube.com/watch?v=Yexo2Ud_3Cw'},
-  {titulo: 'Royal Salute', artista: 'Danzo', src: './src/audio/04.mp3', img: './src/image/04.jpg', link: 'https://www.youtube.com/watch?v=YD-W_7I-168'},
-  // {titulo: 'Se Essa Noite Eu Morrer', artista: 'Denov, Sidoka', src: './src/audio/05.mp3', img: './src/image/05.jpg', link: 'https://www.youtube.com/watch?v=63sXnStb8X4'},
-  {titulo: 'Mercedes', artista: 'Jé, MC IGU', src: './src/audio/06.mp3', img: './src/image/06.jpg', link: 'https://www.youtube.com/watch?v=CSXs5KXfrHo'},
-  // {titulo: 'Al Capone', artista: 'Jovem Dex', src: './src/audio/07.mp3', img: './src/image/07.jpg', link: 'https://www.youtube.com/watch?v=GT6Ja-8FRcY'},
-  {titulo: 'Milhão', artista: 'Leozin', src: './src/audio/08.mp3', img: './src/image/08.jpg', link: 'https://www.youtube.com/watch?v=eAHWRy1JKME'},
-  {titulo: 'Slow Mo 2', artista: 'Leozin, Dudu MC', src: './src/audio/09.mp3', img: './src/image/09.jpg', link: 'https://www.youtube.com/watch?v=Fruog8rds6g'},
-  {titulo: 'Quieto', artista: 'Leviano', src: './src/audio/10.mp3', img: './src/image/10.jpg', link: 'https://www.youtube.com/watch?v=hgwGO8Kpp1U'},
-  // {titulo: 'Noite Fria pt.2', artista: 'Sidoka', src: './src/audio/11.mp3', img: './src/image/11.jpg', link: 'https://www.youtube.com/watch?v=78QJZFdFoYM'},
-  {titulo: 'Camiseta Cara', artista: 'Sidoka', src: './src/audio/12.mp3', img: './src/image/12.jpg', link: 'https://www.youtube.com/watch?v=llVxqbos3ro'},
-  // {titulo: 'LEGO', artista: 'The Boy', src: './src/audio/13.mp3', img: './src/image/13.jpg', link: 'https://www.youtube.com/watch?v=RzNWj6LHWA0'},
-  {titulo: 'Lifestyle', artista: 'The Boy', src: './src/audio/14.mp3', img: './src/image/14.jpg', link: 'https://www.youtube.com/watch?v=YnqwdY-oq3g'},
-  // {titulo: 'YSL', artista: 'The Boy', src: './src/audio/15.mp3', img: './src/image/15.jpg', link: 'https://www.youtube.com/watch?v=-01ppvpKGSc'},
-  {titulo: 'Mistério', artista: 'Trunks', src: './src/audio/16.mp3', img: './src/image/16.jpg', link: 'https://www.youtube.com/watch?v=h_kMb1F3xwg'},
-  {titulo: 'Águia', artista: 'DomLaike', src: './src/audio/17.mp3', img: './src/image/17.jpg', link: 'https://www.youtube.com/watch?v=mZOLt169J68'},
-  {titulo: 'Cinto de Grife', artista: 'Aimar, Dael, Leviano', src: './src/audio/18.mp3', img: './src/image/18.jpg', link: 'https://www.youtube.com/watch?v=lsw61A6iE80'},
-  // {titulo: 'PAPARAZZI!', artista: 'Jovem Dex, Leviano, Brandão', src: './src/audio/19.mp3', img: './src/image/19.jpg', link: 'https://www.youtube.com/watch?v=ItWZP06sdOg'},
-  // {titulo: 'WAU', artista: 'Trunks', src: './src/audio/20.mp3', img: './src/image/20.jpg', link: 'https://www.youtube.com/watch?v=f8ivDp9Q9ks'},
-  // {titulo: 'Ouro', artista: 'BProblemx, Sidoka, XAVS', src: './src/audio/21.mp3', img: './src/image/01.jpg', link: 'https://www.youtube.com/watch?v=7UhmFQjrHq4'},
-  {titulo: 'Scarface', artista: 'Tchelo Rodrigues', src: './src/audio/22.mp3', img: './src/image/22.jpg', link: 'https://www.youtube.com/watch?v=9gG6pNq6lp4'},
-  // {titulo: 'Camisa 10', artista: 'MC Hariel', src: './src/audio/23.mp3', img: './src/image/23.jpg', link: 'https://www.youtube.com/watch?v=3yhbc9U7k8w'},
-  {titulo: 'Passos', artista: 'Tchelo Rodrigues', src: './src/audio/24.mp3', img: './src/image/24.jpg', link: 'https://www.youtube.com/watch?v=QIbwZa-xA6w'},
-  {titulo: 'Kartier', artista: 'Tillmann', src: './src/audio/25.mp3', img: './src/image/25.jpg', link: 'https://www.youtube.com/watch?v=Nlhwp54qmeo'},
-  {titulo: 'Noite de Hostilidade', artista: 'Tchelo Rodrigues', src: './src/audio/26.mp3', img: './src/image/26.jpg', link: 'https://www.youtube.com/watch?v=LhH146UduLw'},
-  {titulo: 'Milhão', artista: 'Leozin', src: './src/audio/27.mp3', img: './src/image/27.jpg', link: 'https://www.youtube.com/watch?v=eAHWRy1JKME'},
-  {titulo: 'Favorito', artista: 'Trunks', src: './src/audio/28.mp3', img: './src/image/28.jpg', link: 'https://www.youtube.com/watch?v=snZzebzfMTw'},
-  {titulo: 'Bem Mais', artista: 'Nicx', src: './src/audio/29.mp3', img: './src/image/29.jpg', link: 'https://www.youtube.com/watch?v=XSsjKXBhzMQ'},
+  {titulo: 'Luxúria', artista: 'Matuê, Xamã', src: './src/audio/01.mp3', img: './src/image/01.jpg', link: 'https://www.youtube.com/watch?v=eycuj9jczm0', explicit: true},
+  {titulo: 'Caracol', artista: 'Brandão', src: './src/audio/02.mp3', img: './src/image/02.jpg', link: 'https://www.youtube.com/watch?v=nTD66AHeU1E', explicit: true},
+  {titulo: 'Elefante', artista: 'Brandão', src: './src/audio/03.mp3', img: './src/image/03.jpg', link: 'https://www.youtube.com/watch?v=Yexo2Ud_3Cw', explicit: true},
+  {titulo: 'Royal Salute', artista: 'Danzo', src: './src/audio/04.mp3', img: './src/image/04.jpg', link: 'https://www.youtube.com/watch?v=YD-W_7I-168', explicit: true},
+  // {titulo: 'Se Essa Noite Eu Morrer', artista: 'Denov, Sidoka', src: './src/audio/05.mp3', img: './src/image/05.jpg', link: 'https://www.youtube.com/watch?v=63sXnStb8X4', explicit: true},
+  {titulo: 'Mercedes', artista: 'Jé, MC IGU', src: './src/audio/06.mp3', img: './src/image/06.jpg', link: 'https://www.youtube.com/watch?v=CSXs5KXfrHo', explicit: true},
+  // {titulo: 'Al Capone', artista: 'Jovem Dex', src: './src/audio/07.mp3', img: './src/image/07.jpg', link: 'https://www.youtube.com/watch?v=GT6Ja-8FRcY', explicit: true},
+  {titulo: 'Milhão', artista: 'Leozin', src: './src/audio/08.mp3', img: './src/image/08.jpg', link: 'https://www.youtube.com/watch?v=eAHWRy1JKME', explicit: true},
+  {titulo: 'Slow Mo 2', artista: 'Leozin, Dudu MC', src: './src/audio/09.mp3', img: './src/image/09.jpg', link: 'https://www.youtube.com/watch?v=Fruog8rds6g', explicit: true},
+  {titulo: 'Quieto', artista: 'Leviano', src: './src/audio/10.mp3', img: './src/image/10.jpg', link: 'https://www.youtube.com/watch?v=hgwGO8Kpp1U', explicit: true},
+  // {titulo: 'Noite Fria pt.2', artista: 'Sidoka', src: './src/audio/11.mp3', img: './src/image/11.jpg', link: 'https://www.youtube.com/watch?v=78QJZFdFoYM', explicit: true},
+  {titulo: 'Camiseta Cara', artista: 'Sidoka', src: './src/audio/12.mp3', img: './src/image/12.jpg', link: 'https://www.youtube.com/watch?v=llVxqbos3ro', explicit: true},
+  // {titulo: 'LEGO', artista: 'The Boy', src: './src/audio/13.mp3', img: './src/image/13.jpg', link: 'https://www.youtube.com/watch?v=RzNWj6LHWA0', explicit: true},
+  {titulo: 'Lifestyle', artista: 'The Boy', src: './src/audio/14.mp3', img: './src/image/14.jpg', link: 'https://www.youtube.com/watch?v=YnqwdY-oq3g', explicit: true},
+  // {titulo: 'YSL', artista: 'The Boy', src: './src/audio/15.mp3', img: './src/image/15.jpg', link: 'https://www.youtube.com/watch?v=-01ppvpKGSc', explicit: true},
+  {titulo: 'Mistério', artista: 'Trunks', src: './src/audio/16.mp3', img: './src/image/16.jpg', link: 'https://www.youtube.com/watch?v=h_kMb1F3xwg', explicit: true},
+  {titulo: 'Águia', artista: 'DomLaike', src: './src/audio/17.mp3', img: './src/image/17.jpg', link: 'https://www.youtube.com/watch?v=mZOLt169J68', explicit: true},
+  {titulo: 'Cinto de Grife', artista: 'Aimar, Dael, Leviano', src: './src/audio/18.mp3', img: './src/image/18.jpg', link: 'https://www.youtube.com/watch?v=lsw61A6iE80', explicit: true},
+  // {titulo: 'PAPARAZZI!', artista: 'Jovem Dex, Leviano, Brandão', src: './src/audio/19.mp3', img: './src/image/19.jpg', link: 'https://www.youtube.com/watch?v=ItWZP06sdOg', explicit: true},
+  // {titulo: 'WAU', artista: 'Trunks', src: './src/audio/20.mp3', img: './src/image/20.jpg', link: 'https://www.youtube.com/watch?v=f8ivDp9Q9ks', explicit: true},
+  // {titulo: 'Ouro', artista: 'BProblemx, Sidoka, XAVS', src: './src/audio/21.mp3', img: './src/image/01.jpg', link: 'https://www.youtube.com/watch?v=7UhmFQjrHq4', explicit: true},
+  {titulo: 'Scarface', artista: 'Tchelo Rodrigues', src: './src/audio/22.mp3', img: './src/image/22.jpg', link: 'https://www.youtube.com/watch?v=9gG6pNq6lp4', explicit: true},
+  // {titulo: 'Camisa 10', artista: 'MC Hariel', src: './src/audio/23.mp3', img: './src/image/23.jpg', link: 'https://www.youtube.com/watch?v=3yhbc9U7k8w', explicit: true},
+  {titulo: 'Passos', artista: 'Tchelo Rodrigues', src: './src/audio/24.mp3', img: './src/image/24.jpg', link: 'https://www.youtube.com/watch?v=QIbwZa-xA6w', explicit: true},
+  {titulo: 'Kartier', artista: 'Tillmann', src: './src/audio/25.mp3', img: './src/image/25.jpg', link: 'https://www.youtube.com/watch?v=Nlhwp54qmeo', explicit: true},
+  {titulo: 'Noite de Hostilidade', artista: 'Tchelo Rodrigues', src: './src/audio/26.mp3', img: './src/image/26.jpg', link: 'https://www.youtube.com/watch?v=LhH146UduLw', explicit: true},
+  {titulo: 'Milhão', artista: 'Leozin', src: './src/audio/27.mp3', img: './src/image/27.jpg', link: 'https://www.youtube.com/watch?v=eAHWRy1JKME', explicit: true},
+  {titulo: 'Favorito', artista: 'Trunks', src: './src/audio/28.mp3', img: './src/image/28.jpg', link: 'https://www.youtube.com/watch?v=snZzebzfMTw', explicit: true},
+  {titulo: 'Bem Mais', artista: 'Nicx', src: './src/audio/29.mp3', img: './src/image/29.jpg', link: 'https://www.youtube.com/watch?v=XSsjKXBhzMQ', explicit: true},
 ]
 
 // Variáveis para o script
@@ -169,15 +169,14 @@ function indexAleatorio(min, max){ //Função que aleatoriamente gera um número
   return (retorno);
 }
 
-function volumeMenos(elem){
-  elem.setAttribute('disabled', 'true');
+function volumeMenos(){
+  console.log('click!');
   if(musica.volume >= 0.1){
     musica.volume = musica.volume -.1;
     nivelVolume(("O volume está em "+Math.ceil((musica.volume)*100))+"%");
   }else{
     nivelVolume("O volume está em 0%");
   }
-  elem.setAttribute('disabled', 'false');
 }
 
 function volumeMudo(elem){
