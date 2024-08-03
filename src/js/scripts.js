@@ -170,9 +170,9 @@ function indexAleatorio(min, max){ //Função que aleatoriamente gera um número
 }
 
 function volumeMenos(){
-  console.log('click!');
   if(musica.volume >= 0.1){
-    musica.volume = musica.volume -.1;
+    musica.volume = musica.volume - .1;
+    if (musica.volume % 0.1 !== 0) musica.volume -= musica.volume % 0.1;
     nivelVolume(("O volume está em "+Math.ceil((musica.volume)*100))+"%");
   }else{
     nivelVolume("O volume está em 0%");
@@ -196,22 +196,28 @@ function volumeAtivo(elem){
 
 function volumeMais(){
   if(musica.volume <= 0.9){
-    musica.volume = musica.volume +.1;
+    musica.volume = musica.volume + .1;
     nivelVolume(("O volume está em "+Math.ceil((musica.volume)*100))+"%");
   }else{
     nivelVolume("O volume está no máximo");
   }
 }
 
+let timeout, segTimeout = null;
+
 function nivelVolume(msg){
   let alert = document.querySelector('#alert-box');
   alert.style.display = "block";
   document.querySelector('#msg').textContent = msg;
   alert.classList.add('fade-in');
-  setTimeout(() => {
+
+  clearTimeout(timeout);
+  clearTimeout(segTimeout);
+
+  timeout = setTimeout(() => {
     alert.classList.remove('fade-in');
     alert.classList.add('fade-out');
-    setTimeout( () => {
+    segTimeout = setTimeout( () => {
       alert.classList.remove('fade-out');
       alert.style.display = "none";
     }, 250)
