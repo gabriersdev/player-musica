@@ -3,8 +3,8 @@
 let musicas = [
   {titulo: 'Luxúria', artista: 'Matuê, Xamã', src: './src/audio/01.mp3', img: './src/image/01.jpg', link: 'https://www.youtube.com/watch?v=eycuj9jczm0', explicit: true},
   {titulo: 'Caracol', artista: 'Brandão', src: './src/audio/02.mp3', img: './src/image/02.jpg', link: 'https://www.youtube.com/watch?v=nTD66AHeU1E', explicit: true},
-  {titulo: 'Elefante', artista: 'Brandão', src: './src/audio/03.mp3', img: './src/image/03.jpg', link: 'https://www.youtube.com/watch?v=Yexo2Ud_3Cw', explicit: true},
   {titulo: 'Royal Salute', artista: 'Danzo', src: './src/audio/04.mp3', img: './src/image/04.jpg', link: 'https://www.youtube.com/watch?v=YD-W_7I-168', explicit: true},
+  {titulo: 'Elefante', artista: 'Brandão', src: './src/audio/03.mp3', img: './src/image/03.jpg', link: 'https://www.youtube.com/watch?v=Yexo2Ud_3Cw', explicit: true},
   // {titulo: 'Se Essa Noite Eu Morrer', artista: 'Denov, Sidoka', src: './src/audio/05.mp3', img: './src/image/05.jpg', link: 'https://www.youtube.com/watch?v=63sXnStb8X4', explicit: true},
   {titulo: 'Mercedes', artista: 'Jé, MC IGU', src: './src/audio/06.mp3', img: './src/image/06.jpg', link: 'https://www.youtube.com/watch?v=CSXs5KXfrHo', explicit: true},
   // {titulo: 'Al Capone', artista: 'Jovem Dex', src: './src/audio/07.mp3', img: './src/image/07.jpg', link: 'https://www.youtube.com/watch?v=GT6Ja-8FRcY', explicit: true},
