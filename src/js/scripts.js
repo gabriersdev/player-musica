@@ -91,7 +91,13 @@ function musicaProxima(){
 //Funções 
 function renderizarMusica(index){
   musica.setAttribute('src', musicas[index].src); //Acessando o array
-  musica.play();
+  
+  try {
+    musica.play();
+  } catch (error) {
+    console.log('Não foi possível reproduzir a música. Motivo: ', error);
+    console.log('Se for a primeira chamada da função, ignore o erro, pois é necessário que primeiro o usuário interaja de alguma forma com a página para que a música seja reproduzida.');
+  }
   
   if(document.querySelector('.botao-pause').style.display = "none"){
     document.querySelector('.botao-pause').style.display = 'block';
@@ -99,6 +105,7 @@ function renderizarMusica(index){
   }
   
   musica.addEventListener('loadeddata', () => { //Evento que só é executado depois que a música for carregada
+    document.title = musicas[index].titulo + " - " + musicas[index].artista; //Alterando o título da página
     nomeMusica.textContent = musicas[index].titulo; //Alterando as informações das músicas
     nomeArtista.textContent = musicas[index].artista; //Alterando as informações das músicas
     imagem.setAttribute('src', musicas[index].img); //Trocando a imagem de capa
@@ -240,4 +247,10 @@ function ativaCheckbox(){
 
 window.addEventListener('load', () => {
   checkbox.checked = false;
+
+  // Renderiza a primeira música
+  renderizarMusica(indexMusica);
+  // Oculta o botão de pause e exibe o de play, já que a função renderiza música tenta dar o play e troca a exibição dos botões
+  document.querySelector('.botao-play').style.display = 'block';
+  document.querySelector('.botao-pause').style.display = 'none';
 });
