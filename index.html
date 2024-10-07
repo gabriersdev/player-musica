@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Player de Música</title>
-  
-  <!-- Importação dos arquivos CSS -->
-  <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="shortcut icon" href="./src/image/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"> <!-- Biblioteca de icons -->
-  <!-- Fim da Importação dos arquivos CSS -->
-  
-</head>
-<body data-link="../image/01.jpg">
-  <div class="container">
-    <div class="centro">
-      <img class="capa" src="./src/image/01.jpg" alt="">
-      <div class="descricao">
-        <div class="header-descricao">
-          <h2 class="titulo">Luxúria</h2>
-          <div class="aleatorio">
-            <input type="checkbox" name="aleatorio" id="aleatorio" class="checkbox-aleatorio">
-            <i class="fas fa-duotone fa-shuffle icon-aleatorio disabled" id="icon-aleatorio" onclick="ativaCheckbox()" title="Ativa ou desativa modo aleatório"></i>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Player de Música</title>
+
+    <!-- Importação dos arquivos CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/image/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      crossorigin="anonymous"> <!-- Biblioteca de icons -->
+    <!-- Fim da Importação dos arquivos CSS -->
+
+  </head>
+
+  <body data-link="../image/01.jpg">
+    <div class="container">
+      <div class="centro">
+        <img class="capa" src="./src/image/01.jpg" alt="">
+        <div class="descricao">
+          <div class="header-descricao">
+            <h2 class="titulo">Luxúria</h2>
+            <div class="aleatorio">
+              <input type="checkbox" name="aleatorio" id="aleatorio" class="checkbox-aleatorio">
+              <i class="fas fa-duotone fa-shuffle icon-aleatorio disabled" id="icon-aleatorio" onclick="ativaCheckbox()"
+                title="Ativa ou desativa modo aleatório"></i>
+            </div>
+          </div>
+          <p class="artista">Matuê, Xamã</p>
+        </div>
+
+        <!-- TODO - Alterar i por botões para maior acessibilidade -->
+        <div class="controles">
+          <button class="btn-invisivel" onclick="volumeMenos()"><i class="fa-solid fa-volume-low volume-menos"
+              title="Diminuir volume"></i></button>
+          <button class="btn-invisivel" onclick="volumeMudo(this)"><i class="fa-solid fa-volume-xmark volume-mudo"
+              title="Mutar ou desmutar volume"></i></button>
+          <button class="btn-invisivel" onclick="volumeMais()"><i class="fa-solid fa-volume-high volume-mais"
+              title="Aumentar volume"></i></button>
+        </div>
+
+        <div class="duracao">
+          <div class="barra">
+            <progress id="progress" value="0" max="1" onclick="alert('Click' + this.offsetX)"></progress>
+            <div class="ponto">
+            </div>
+          </div>
+          <div class="tempo">
+            <p class="inicio">0:00</p>
+            <p class="fim">4:04</p>
           </div>
         </div>
-        <p class="artista">Matuê, Xamã</p>
-      </div>
-      
-      <!-- TODO - Alterar i por botões para maior acessibilidade -->
-      <div class="controles">
-        <button class="btn-invisivel" onclick="volumeMenos()"><i class="fa-solid fa-volume-low volume-menos" title="Diminuir volume"></i></button>
-        <button  class="btn-invisivel" onclick="volumeMudo(this)"><i class="fa-solid fa-volume-xmark volume-mudo" title="Mutar ou desmutar volume"></i></button>
-        <button class="btn-invisivel" onclick="volumeMais()"><i class="fa-solid fa-volume-high volume-mais" title="Aumentar volume"></i></button>
-      </div>
-      
-      <div class="duracao">
-        <div class="barra">
-          <progress id="progress" value="0" max="1"></progress>
-          <div class="ponto">
-          </div>
+
+        <!-- TODO - Alterar i por botões para maior acessibilidade -->
+        <div class="player">
+          <button class="btn-invisivel" onclick="musicaAnterior()"><i
+              class="fas fa-duotone fa-backward-step botao-seta anterior" title="Voltar"></i></button>
+          <button class="btn-invisivel botao-play"><i class="fas fa-solid fa-circle-play" title="Tocar"></i></button>
+          <button class="btn-invisivel botao-pause"><i class="fas fa-solid fa-circle-pause" title="Pausar"></i></button>
+          <button class="btn-invisivel"><i class="fas fa-duotone fa-forward-step botao-seta proxima"
+              onclick="musicaProxima()" title="Próxima"></i></button>
         </div>
-        <div class="tempo">
-          <p class="inicio">0:00</p>
-          <p class="fim">4:04</p>
+
+        <div class="creditos">
+          <a href="" target="_blank" id="link-youtube">Ver no Youtube</a>
+          <i class="fa-solid fa-square-arrow-up-right"></i>
+        </div>
+
+        <!-- A faixa 01.mp3 é a primeira a ser carregada por padrão -->
+        <audio src="./src/audio/01.mp3" autoplay></audio>
+
+        <div class="alert-box" id="alert-box">
+          <p id="msg" class="feedback">O volume está em 21%</p>
         </div>
       </div>
-      
-      <!-- TODO - Alterar i por botões para maior acessibilidade -->
-      <div class="player">
-        <button class="btn-invisivel" onclick="musicaAnterior()"><i class="fas fa-duotone fa-backward-step botao-seta anterior" title="Voltar"></i></button>
-        <button class="btn-invisivel botao-play"><i class="fas fa-solid fa-circle-play" title="Tocar"></i></button>
-        <button class="btn-invisivel botao-pause"><i class="fas fa-solid fa-circle-pause" title="Pausar"></i></button>
-        <button class="btn-invisivel"><i class="fas fa-duotone fa-forward-step botao-seta proxima" onclick="musicaProxima()" title="Próxima"></i></button>
-      </div>
-      
-      <div class="creditos">
-        <a href="" target="_blank" id="link-youtube">Ver no Youtube</a>
-        <i class="fa-solid fa-square-arrow-up-right"></i>
-      </div>
-      
-      <!-- A faixa 01.mp3 é a primeira a ser carregada por padrão -->
-      <audio src="./src/audio/01.mp3"></audio>
-      
-      <div class="alert-box" id="alert-box"><p id="msg" class="feedback">O volume está em 21%</p></div>
     </div>
-  </div>
-  
-  <!-- Importação de arquivos Javascript -->
-  <script src="./src/js/scripts.js"></script>
-  <!-- Fim da importação -->  
-  
-</body>
+
+    <!-- Importação de arquivos Javascript -->
+    <script src="./src/js/scripts.js"></script>
+    <!-- Fim da importação -->
+
+  </body>
+
 </html>
