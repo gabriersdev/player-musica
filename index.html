@@ -57,12 +57,18 @@
 
         <!-- TODO - Alterar i por botões para maior acessibilidade -->
         <div class="player">
-          <button class="btn-invisivel" onclick="musicaAnterior()"><i
-              class="fas fa-duotone fa-backward-step botao-seta anterior" title="Voltar"></i></button>
-          <button class="btn-invisivel botao-play"><i class="fas fa-solid fa-circle-play" title="Tocar"></i></button>
-          <button class="btn-invisivel botao-pause"><i class="fas fa-solid fa-circle-pause" title="Pausar"></i></button>
-          <button class="btn-invisivel"><i class="fas fa-duotone fa-forward-step botao-seta proxima"
-              onclick="musicaProxima()" title="Próxima"></i></button>
+          <button class="btn-invisivel">
+            <i class="fas fa-duotone fa-backward-step botao-seta anterior" title="Voltar"></i>
+          </button>
+          <button class="btn-invisivel botao-play">
+            <i class="fas fa-solid fa-circle-play" title="Tocar"></i>
+          </button>
+          <button class="btn-invisivel botao-pause">
+            <i class="fas fa-solid fa-circle-pause" title="Pausar"></i>
+          </button>
+          <button class="btn-invisivel">
+            <i class="fas fa-duotone fa-forward-step botao-seta proxima" title="Próxima"></i>
+          </button>
         </div>
 
         <div class="creditos">
@@ -71,7 +77,9 @@
         </div>
 
         <!-- A faixa 01.mp3 é a primeira a ser carregada por padrão -->
-        <audio src="./src/audio/01.mp3" autoplay></audio>
+        <audio autoplay>
+          <source src="./src/audio/01.mp3" type="audio/mp3">
+        </audio>
 
         <div class="alert-box" id="alert-box">
           <p id="msg" class="feedback">O volume está em 21%</p>
